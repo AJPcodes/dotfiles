@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-    name = exmaple
-    email = example@example.com
+    name = Real Name
+    email = real@email.com
 [credential]
     helper = osxkeychain
 [core]

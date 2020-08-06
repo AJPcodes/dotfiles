@@ -1,11 +1,11 @@
 if status is-login
     # Initialize Homebrew
     set -gx HOMEBREW_PREFIX "/usr/local";
-set -gx HOMEBREW_CELLAR "/usr/local/Cellar";
-set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew";
-set -q PATH; or set PATH ''; set -gx PATH "/usr/local/bin" "/usr/local/sbin" $PATH;
-set -q MANPATH; or set MANPATH ''; set -gx MANPATH "/usr/local/share/man" $MANPATH;
-set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/usr/local/share/info" $INFOPATH;
+    set -gx HOMEBREW_CELLAR "/usr/local/Cellar";
+    set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew";
+    set -q PATH; or set PATH ''; set -gx PATH "/usr/local/bin" "/usr/local/sbin" $PATH;
+    set -q MANPATH; or set MANPATH ''; set -gx MANPATH "/usr/local/share/man" $MANPATH;
+    set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/usr/local/share/info" $INFOPATH;
 
     # Initialize asdf
     source /usr/local/opt/asdf/asdf.fish
@@ -18,6 +18,13 @@ set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/usr/local/share/info" $I
 
     # Set up config alias for using a bare repo for dotfiles
     alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+    
+    # Common dev commands:
+    alias checkx="mix compile --warnings-as-errors && mix credo --ignore design --strict && mix release --warnings-as-errors"
+    alias startx="iex -S mix phx.server"
+    alias compilex="mix compile --force --show-warnings
+    alias startc="yarn && yarn run dev"
+
 end
 
 if status is-interactive
