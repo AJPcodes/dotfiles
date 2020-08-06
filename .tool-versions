@@ -1,0 +1,5 @@
+elixir 1.10.4
+erlang 23.0.3
+nodejs 14.6.0
+postgres 12.3
+yarn 1.22.4
