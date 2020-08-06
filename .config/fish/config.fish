@@ -14,7 +14,7 @@ if status is-login
     set -p PATH 
 
     # Secrets
-    test -e $HOME/.secrets && source $HOME/.secrets
+    test -e $HOME/.secrets.fish && source $HOME/.secrets.fish
 
     # Set up config alias for using a bare repo for dotfiles
     alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
@@ -22,7 +22,7 @@ if status is-login
     # Common dev commands:
     alias checkx="mix compile --warnings-as-errors && mix credo --ignore design --strict && mix release --warnings-as-errors"
     alias startx="iex -S mix phx.server"
-    alias compilex="mix compile --force --show-warnings
+    alias compilex="mix compile --force --show-warnings"
     alias startc="yarn && yarn run dev"
 
 end
@@ -41,7 +41,9 @@ if status is-interactive
     set -x BAT_PAGER less -R
     set -x BAT_THEME Dracula
 
+
     # fzf options
     set -l fzf_colors "fg:-1,fg+:-1,bg:-1,bg+:-1,hl:6,hl+:6,spinner:4,info:4,marker:4,pointer:2,prompt:2"
     set -x FZF_DEFAULT_OPTS "--reverse --no-info --height 50% --color $fzf_colors"
+
 end
