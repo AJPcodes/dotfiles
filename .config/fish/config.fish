@@ -25,6 +25,9 @@ if status is-login
     alias compilex="mix compile --force --show-warnings"
     alias startc="yarn && yarn run dev"
 
+    # Support autojump
+    [ -f (brew --prefix)/share/autojump/autojump.fish ]; and source (brew --prefix)/share/autojump/autojump.fish
+
 end
 
 if status is-interactive
@@ -47,3 +50,4 @@ if status is-interactive
     set -x FZF_DEFAULT_OPTS "--reverse --no-info --height 50% --color $fzf_colors"
 
 end
+

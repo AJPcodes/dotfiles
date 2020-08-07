@@ -10,6 +10,7 @@ brew "fish"
 brew "fzf"
 brew "git-delta"
 brew "git"
+brew "autojump"
 
 # asdf dependencies for building Erlang
 brew "autoconf"
@@ -24,3 +25,4 @@ cask "google-chrome"
 cask "datagrip"
 cask "slack"
 cask "rectangle"
+cask "docker"
