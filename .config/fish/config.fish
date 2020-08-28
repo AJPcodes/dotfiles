@@ -28,6 +28,8 @@ if status is-login
     # Support autojump
     [ -f (brew --prefix)/share/autojump/autojump.fish ]; and source (brew --prefix)/share/autojump/autojump.fish
 
+    
+
 end
 
 if status is-interactive
@@ -49,5 +51,7 @@ if status is-interactive
     set -l fzf_colors "fg:-1,fg+:-1,bg:-1,bg+:-1,hl:6,hl+:6,spinner:4,info:4,marker:4,pointer:2,prompt:2"
     set -x FZF_DEFAULT_OPTS "--reverse --no-info --height 50% --color $fzf_colors"
 
+    # Avoid erlang mac oddities:
+    set -x KERL_CONFIGURE_OPTIONS "--without-javac --disable-hipe --with-ssl=(brew --prefix openssl)"
 end
 

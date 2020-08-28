@@ -12,6 +12,11 @@ brew "git-delta"
 brew "git"
 brew "autojump"
 
+# Used by vault
+brew "wdiff"
+brew "jq"
+brew "colordiff"
+
 # asdf dependencies for building Erlang
 brew "autoconf"
 brew "wxmac" if OS.mac?
