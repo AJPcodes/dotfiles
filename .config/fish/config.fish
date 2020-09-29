@@ -23,7 +23,7 @@ if status is-login
     alias checkx="mix compile --warnings-as-errors && mix credo --ignore design --strict && mix release --warnings-as-errors"
     alias startx="iex -S mix phx.server"
     alias compilex="mix compile --force --show-warnings"
-    alias startc="yarn && yarn run dev"
+    alias startc="yarn bs:build && yarn ts:build && yarn run dev"
 
     # Support autojump
     [ -f (brew --prefix)/share/autojump/autojump.fish ]; and source (brew --prefix)/share/autojump/autojump.fish
