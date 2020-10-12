@@ -11,6 +11,7 @@ brew "fzf"
 brew "git-delta"
 brew "git"
 brew "autojump"
+brew "erlang", args: ["only-dependencies"]
 
 # Used by vault
 brew "wdiff"

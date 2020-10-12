@@ -52,6 +52,6 @@ if status is-interactive
     set -x FZF_DEFAULT_OPTS "--reverse --no-info --height 50% --color $fzf_colors"
 
     # Avoid erlang mac oddities:
-    set -x KERL_CONFIGURE_OPTIONS "--without-javac --disable-hipe --with-ssl=(brew --prefix openssl)"
+    # set -x KERL_CONFIGURE_OPTIONS "--without-javac --disable-hipe --with-ssl=(brew --prefix openssl)"
 end
 
