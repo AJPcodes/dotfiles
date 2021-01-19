@@ -2,34 +2,43 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
 # General
+brew "amazon-ecs-cli"
 brew "asdf"
+brew "autojump"
 brew "awscli"
 # Syntax Highlighting https://github.com/sharkdp/bat
 brew "bat"
+brew "erlang", args: ["only-dependencies"]
 brew "fish"
 brew "fzf"
-brew "git-delta"
 brew "git"
-brew "autojump"
-brew "erlang", args: ["only-dependencies"]
+brew "git-delta"
 
 # Used by vault
-brew "wdiff"
-brew "jq"
 brew "colordiff"
+brew "jq"
+brew "wdiff"
+
+# Used by asdf-nodejs
+brew "coreutils"
+brew "gpg"
 
 # asdf dependencies for building Erlang
 brew "autoconf"
 brew "wxmac" if OS.mac?
 
 # Casks
-cask "font-jetbrains-mono"
-cask "gpg-suite"
-cask "visual-studio-code"
-cask "mattermost"
-cask "google-chrome"
 cask "datagrip"
-cask "slack"
-cask "rectangle"
 cask "docker"
+cask "firefox"
 cask "flycut"
+cask "font-jetbrains-mono"
+cask "google-chrome"
+cask "gpg-suite"
+cask "iTerm2"
+cask "mattermost"
+cask "pritunl"
+cask "rectangle"
+cask "safeincloud-password-manager"
+cask "slack"
+cask "visual-studio-code"
