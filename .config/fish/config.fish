@@ -24,6 +24,7 @@ if status is-login
     alias startx="iex -S mix phx.server"
     alias compilex="mix compile --force --show-warnings"
     alias startc="yarn bs:build && yarn run dev"
+    alias python python3
 
     # Support autojump
     [ -f (brew --prefix)/share/autojump/autojump.fish ]; and source (brew --prefix)/share/autojump/autojump.fish
