@@ -1,11 +1,15 @@
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "TylerBrock/saw"
 
 # General
 brew "amazon-ecs-cli"
 brew "asdf"
 brew "autojump"
 brew "awscli"
+brew "saw"
+brew "jq"
+
 # Syntax Highlighting https://github.com/sharkdp/bat
 brew "bat"
 brew "erlang", args: ["only-dependencies"]
@@ -16,7 +20,6 @@ brew "git-delta"
 
 # Used by vault
 brew "colordiff"
-brew "jq"
 brew "wdiff"
 
 # Used by asdf-nodejs
@@ -39,7 +42,8 @@ cask "iTerm2"
 cask "mattermost"
 cask "pritunl"
 cask "rectangle"
-cask "safeincloud-password-manager"
+# cask "safeincloud-password-manager"
 cask "slack"
 cask "visual-studio-code"
 cask "postman"
+cask "aws-vault"

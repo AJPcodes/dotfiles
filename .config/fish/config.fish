@@ -24,6 +24,11 @@ if status is-login
     alias startx="iex -S mix phx.server"
     alias compilex="mix compile --force --show-warnings"
     alias startc="yarn bs:build && yarn run dev"
+    alias cb-dev="aws-vault exec cb-dev --"
+    # alias cb-mgmt="aws-vault exec cb-mgmt --"
+    # alias cb-demo="aws-vault exec cb-demo --"
+    alias cb-stg="aws-vault exec cb-stg --"
+    alias cb-prd="aws-vault exec cb-prd --"
     alias python python3
 
     # Support autojump
