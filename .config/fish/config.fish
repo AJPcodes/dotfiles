@@ -7,6 +7,7 @@ if status is-login
     set -q MANPATH; or set MANPATH ''; set -gx MANPATH "/usr/local/share/man" $MANPATH;
     set -q INFOPATH; or set INFOPATH ''; set -gx INFOPATH "/usr/local/share/info" $INFOPATH;
 
+
     # Initialize asdf
     source /usr/local/opt/asdf/asdf.fish
 
@@ -30,9 +31,20 @@ if status is-login
     alias cb-stg="aws-vault exec cb-stg --"
     alias cb-prd="aws-vault exec cb-prd --"
     alias python python3
+    # brew aliases 
+    alias brewp='brew pin'
+    alias brews='brew list -1'
+    alias brewsp='brew list --pinned'
+    alias bubo='brew update && brew outdated'
+    alias bubc='brew upgrade && brew cleanup'
+    alias bubu='bubo && bubc'
+    alias bcubo='brew update && brew cask outdated'
+    alias bcubc='brew cask reinstall $(brew cask outdated) && brew cleanup'
 
     # Support autojump
     [ -f (brew --prefix)/share/autojump/autojump.fish ]; and source (brew --prefix)/share/autojump/autojump.fish
+
+
 
     
 
