@@ -31,7 +31,8 @@ brew "gpg"
 # asdf dependencies for building Erlang
 # brew "erlang", args: ["only-dependencies"]
 brew "autoconf"
-brew "wxmac" if OS.mac?
+# Appears to be deprecated in favor of wxwidgets
+# brew "wxmac" if OS.mac?
 brew "openssl@1.1"
 brew "wxwidgets"
 
