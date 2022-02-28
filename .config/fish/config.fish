@@ -39,7 +39,7 @@ if status is-login
     alias bubc='brew upgrade && brew cleanup'
     alias bubu='bubo && bubc'
     alias bcubo='brew update && brew cask outdated'
-    alias bcubc='brew cask reinstall $(brew cask outdated) && brew cleanup'
+    alias bcubc='brew cask reinstall (brew cask outdated) && brew cleanup'
 
     # Support autojump
     [ -f (brew --prefix)/share/autojump/autojump.fish ]; and source (brew --prefix)/share/autojump/autojump.fish
@@ -70,6 +70,7 @@ if status is-interactive
     set -x FZF_DEFAULT_OPTS "--reverse --no-info --height 50% --color $fzf_colors"
 
     # Avoid erlang mac oddities:
-    # set -x KERL_CONFIGURE_OPTIONS "--without-javac --disable-hipe --with-ssl=(brew --prefix openssl)"
+    set -x KERL_CONFIGURE_OPTIONS "--without-javac --with-ssl=/usr/local/opt/openssl@1.1" 
+    # set -x KERL_CONFIGURE_OPTIONS "--without-javac --disable-hipe --with-ssl=/usr/local/opt/openssl@1.1"
 end
 

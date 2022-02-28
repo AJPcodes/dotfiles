@@ -1,3 +1,5 @@
+# brew bundle --no-lock --file=.Brewfile
+
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "TylerBrock/saw"
@@ -12,7 +14,7 @@ brew "jq"
 
 # Syntax Highlighting https://github.com/sharkdp/bat
 brew "bat"
-brew "erlang", args: ["only-dependencies"]
+
 brew "fish"
 brew "fzf"
 brew "git"
@@ -27,8 +29,11 @@ brew "coreutils"
 brew "gpg"
 
 # asdf dependencies for building Erlang
+# brew "erlang", args: ["only-dependencies"]
 brew "autoconf"
 brew "wxmac" if OS.mac?
+brew "openssl@1.1"
+brew "wxwidgets"
 
 # Casks
 cask "datagrip"
@@ -48,3 +53,8 @@ cask "visual-studio-code"
 cask "postman"
 cask "aws-vault"
 cask "ngrok"
+
+# Keyboard
+# cask "karabiner-elements"
+
+# brew bundle --no-lock --file=.Brewfile

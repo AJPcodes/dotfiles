@@ -1,6 +1,6 @@
-elixir 1.11.2-otp-23
-erlang 23.0.3
+elixir 1.13.1
+erlang 24.1.1
+postgres 13.4
 nodejs 14.6.0
-postgres 12.6
 yarn 1.22.4
 python 3.9.1
