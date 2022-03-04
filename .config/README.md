@@ -69,3 +69,6 @@ Switched from the extension to the built in version
 
 ### Dockerized postgres DB :
 `docker run --name cb-dev -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres:13`
+
+
+Install Obsidion and sync with google drive folder
