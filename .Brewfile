@@ -11,6 +11,8 @@ brew "autojump"
 brew "awscli"
 brew "saw"
 brew "jq"
+brew "sshuttle"
+brew "twilio"
 
 # Syntax Highlighting https://github.com/sharkdp/bat
 brew "bat"
@@ -35,8 +37,9 @@ brew "autoconf"
 # brew "wxmac" if OS.mac?
 brew "openssl@1.1"
 brew "wxwidgets"
-
+brew "postgis"
 # Casks
+
 cask "datagrip"
 cask "docker"
 cask "firefox"

@@ -4,3 +4,4 @@ postgres 13.4
 nodejs lts
 yarn 1.22.4
 python 3.9.1
+java adoptopenjdk-17.0.2+8

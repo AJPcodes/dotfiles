@@ -109,7 +109,7 @@ if [ ! -f  ]; then
     echo "File not found!" >&2
     exit 1
 fi
-if [ -f $HOME/.secrets.zshrc ]; 
+if [ -f $HOME/.secrets.zshrc ];
 then
     source $HOME/.secrets.zshrc
 else
@@ -130,7 +130,7 @@ alias cb-dev="aws-vault exec cb-dev --"
 alias cb-stg="aws-vault exec cb-stg --"
 alias cb-prd="aws-vault exec cb-prd --"
 alias python python3
-# brew aliases 
+# brew aliases
 alias brewp='brew pin'
 alias brews='brew list -1'
 alias brewsp='brew list --pinned'
@@ -141,12 +141,20 @@ alias bcubo='brew update && brew cask outdated'
 alias bcubc='brew cask reinstall (brew cask outdated) && brew cleanup'
 
 
-## Autojump 
+## Autojump
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 ### ENV FLAGS
 export ERL_AFLAGS="-kernel shell_history enabled"
 export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openssl@1.1)"
 
-# asdt setup
+
+# Java setup
+ ~/.asdf/plugins/java/set-java-home.zsh
+
+# asdf setup
 . /opt/homebrew/opt/asdf/asdf.sh
+
+
+# printf "eval $(twilio autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrceval
+TWILIO_AC_ZSH_SETUP_PATH=/Users/ajp/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setupeval
