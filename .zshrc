@@ -5,6 +5,7 @@ export PATH="$HOME/scripts/:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -150,11 +151,22 @@ export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openss
 
 
 # Java setup
- ~/.asdf/plugins/java/set-java-home.zsh
+#  ~/.asdf/plugins/java/set-java-home.zsh
+
+
+# export JAVA_HOME=/Users/ajp/.asdf/installs/java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 
 # asdf setup
-. /opt/homebrew/opt/asdf/asdf.sh
-
+# . /opt/homebrew/opt/asdf/asdf.sh
+# echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
 # printf "eval $(twilio autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrceval
 TWILIO_AC_ZSH_SETUP_PATH=/Users/ajp/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setupeval
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+

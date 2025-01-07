@@ -1,6 +1,6 @@
 # brew bundle --no-lock --file=.Brewfile
 
-tap "homebrew/cask"
+# tap "homebrew/cask" not needed anymore?
 tap "homebrew/cask-fonts"
 tap "TylerBrock/saw"
 
@@ -12,7 +12,7 @@ brew "awscli"
 brew "saw"
 brew "jq"
 brew "sshuttle"
-brew "twilio"
+# brew "twilio"
 
 # Syntax Highlighting https://github.com/sharkdp/bat
 brew "bat"
@@ -57,6 +57,7 @@ cask "visual-studio-code"
 cask "postman"
 cask "aws-vault"
 cask "ngrok"
+cask "obsidian"
 
 # Keyboard
 # cask "karabiner-elements"
