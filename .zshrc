@@ -168,5 +168,19 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # printf "eval $(twilio autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrceval
 TWILIO_AC_ZSH_SETUP_PATH=/Users/ajp/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setupeval
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+#  Added to help with postgres 16.6 install
+export PKG_CONFIG_PATH="/opt/homebrew/bin/pkg-config:$(brew --prefix icu4c)/lib/pkgconfig:$(brew --prefix curl)/lib/pkgconfig:$(brew --prefix zlib)/lib/pkgconfig"
 
+# Used when connecting to prod
+
+# export PGSSLMODE="verify-full"
+export PGSSLROOTCERT="~/.postgresql/us-east-2-bundle.pem"
+export GOLGI_DB_SSL_CERT_PATH="/Users/ajp/.postgresql/us-east-2-bundle.pem"
+
+
+# Set GOROOT
+. ~/.asdf/plugins/golang/set-env.zsh
+
+
+export PATH="$(brew --prefix asdf)/bin:$PATH"
+export PATH="$HOME/.asdf/shims:$PATH"
